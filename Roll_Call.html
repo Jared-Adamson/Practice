@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div id = "class-window">
+		    <h2> Student Class List</h2>
+		    <ul id = "class-list">
+		        <li>Karel the Dog</li>
+		        <li>Tracy the Turtle</li>
+		        <li>Jeremy the Human</li>
+		    </ul>
+		</div>
+		<script>
+		/*
+		Using only Javascript, add your name to the end of the roll call list.
+        You should also add an h4 tag that reads "CodeHS Class" before the 
+        start of the list to indicate which class this roll call is for. 
+        Do so using the insertBefore function.
+		*/
+		    //Append your name at the end of the roll call list
+		    
+		    var myName = document.createElement("li");
+		    myName.innerHTML = "Mr. Adamson";
+		    document.getElementById("class-list").appendChild(myName);
+		    
+		    //insert "Class CodeHS" before the list!
+		    var title = document.createElement("h4");
+		    title.innerHTML = "CodeHS Class";
+		    var classLst = document.getElementById("class-list");
+		    document.getElementById("class-window").insertBefore(title, classLst);
+		    
+		</script>
+	</body>
+</html>
