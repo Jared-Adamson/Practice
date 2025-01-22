@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		        display:flex;
+		        flex-wrap: wrap;
+		        height:100%;
+		        width:100%;
+		        padding-left:2%;
+		        padding-right:2%;
+		    }
+		    div{
+		        height:10%;
+		        width:9%;
+		        border: 1px solid black;
+		    }
+		</style>
+	</head>
+	<body>
+		<script>
+		    //add 100 divs to the canvas
+		    for(i=0; i<100; i++){
+		        var box = document.createElement("div");
+		        box.addEventListener("mouseover", paint);
+		        document.body.appendChild(box);
+		    }
+		    //write function to paint 
+		    function paint(){
+		        var color = "#"
+		        for(x=0; x<3; x++){
+		            var randoHex = Math.floor(Math.random()*256).toString(16);
+		            if(randoHex < 2){
+		                randoHex = "0"+randoHex;
+		            }
+		            color = color+randoHex;
+		        }
+		        this.style.backgroundColor = color;
+		    }
+		</script>
+	</body>
+</html>
