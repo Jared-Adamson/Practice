@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		        display:flex;
+		        flex-wrap: wrap;
+		        height:100%;
+		        width:100%;
+		        padding-left:2%;
+		        padding-right:2%;
+		    }
+		    div{
+		        height:10%;
+		        width:9%;
+		        border: 1px solid black;
+		    }
+		</style>
+	</head>
+	<body>
+		<script>
+		    //add 100 divs to the canvas
+		    for(i=0; i<100; i++){
+		        var square = document.createElement("div");
+		        square.addEventListener("mouseover", rndPaint);
+		        document.body.appendChild(square);
+		    }
+		    
+		    //write function to paint 
+		    function rndPaint(){
+		        var r = Math.floor(Math.random()*256);
+		        var g = Math.floor(Math.random()*256);
+		        var b = Math.floor(Math.random()*256);
+		        this.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+		    }    
+		</script>
+	</body>
+</html>
